@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Orders</string>
+    <string name="flash_title">Chuyển Đơn Hàng</string>
+    <string name="login_btnSubmit">Đăng Nhập</string>
+    <string name="login_edtName">Tên Đăng Nhập</string>
+    <string name="login_edtPasswd">Mật Khẩu</string>
+    <string name="drawer_nav_home">Mục Chính</string>
+    <string name="drawer_nav_profile">Hồ Sơ</string>
+    <string name="drawer_nav_orders">Đơn Hàng Đã Tạo</string>
+    <string name="drawer_nav_order_ship">Đơn Hàng Cần Chuyển</string>
+    <string name="drawer_nav_pay">Đơn Hàng Cần Thanh Toán</string>
+    <string name="drawer_nav_logout">Thoát</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
