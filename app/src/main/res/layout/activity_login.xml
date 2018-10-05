@@ -28,14 +28,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/login_edtName"
+            android:id="@+id/login_edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00000000"
             android:ems="50"
             android:textSize="24sp"
-            android:hint="@string/login_edtName"
-            android:inputType="textPersonName" />
+            android:hint="@string/login_edtPhone"
+            android:inputType="phone" />
 
         <EditText
             android:id="@+id/login_edtPasswd"
@@ -52,9 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/shadow_layer"
-            android:shadowColor="@android:color/darker_gray"
+            android:background="@color/colorPink"
             android:text="@string/login_btnSubmit"
             android:textColor="#fff"
             android:textSize="24sp"

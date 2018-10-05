@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Orders</string>
+    <string name="app_name">DH</string>
     <string name="flash_title">Chuyển Đơn Hàng</string>
     <string name="login_btnSubmit">Đăng Nhập</string>
     <string name="login_edtName">Tên Đăng Nhập</string>
+    <string name="login_edtPhone">Số Điện Thoại</string>
     <string name="login_edtPasswd">Mật Khẩu</string>
     <string name="drawer_nav_home">Mục Chính</string>
     <string name="drawer_nav_profile">Hồ Sơ</string>
@@ -10,6 +11,10 @@
     <string name="drawer_nav_order_ship">Đơn Hàng Cần Chuyển</string>
     <string name="drawer_nav_pay">Đơn Hàng Cần Thanh Toán</string>
     <string name="drawer_nav_logout">Thoát</string>
+    <string name="home_bottom_nav_main">Đơn Hàng</string>
+    <string name="home_bottom_nav_coin">Số Xu</string>
+    <string name="home_bottom_nav_profile">Hồ Sơ</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

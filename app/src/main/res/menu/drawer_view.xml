@@ -3,27 +3,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_nav_home"
-            android:icon="@drawable/baseline_home_black_18dp"
+            android:icon="@drawable/baseline_home_white_36dp"
             android:title="@string/drawer_nav_home" />
         <item
             android:id="@+id/drawer_nav_profile"
-            android:icon="@drawable/baseline_account_circle_black_18dp"
+            android:icon="@drawable/baseline_account_circle_white_36dp"
             android:title="@string/drawer_nav_profile" />
         <item
             android:id="@+id/drawer_nav_orders"
-            android:icon="@drawable/baseline_book_black_18dp"
+            android:icon="@drawable/baseline_book_white_36dp"
             android:title="@string/drawer_nav_orders" />
         <item
             android:id="@+id/drawer_nav_order_ship"
-            android:icon="@drawable/baseline_bookmarks_black_18dp"
+            android:icon="@drawable/baseline_bookmarks_white_36dp"
             android:title="@string/drawer_nav_order_ship" />
         <item
             android:id="@+id/drawer_nav_pay"
-            android:icon="@drawable/baseline_payment_black_18dp"
+            android:icon="@drawable/baseline_payment_white_36dp"
             android:title="@string/drawer_nav_pay" />
         <item
             android:id="@+id/drawer_nav_logout"
-            android:icon="@drawable/baseline_exit_to_app_black_18dp"
+            android:icon="@drawable/baseline_exit_to_app_white_36dp"
             android:title="@string/drawer_nav_logout" />
         />
     </group>
