@@ -17,6 +17,7 @@ public class Helper {
             "Mật khẩu không để rỗng"
     };
     public static String SUCCESS = "Thành công";
+    public static String CREATE_ORDER = "Tạo đơn hàng mới";
     public static int ID_MENU_DRAWER_HOME = 0;
     public static int ID_MENU_DRAWER_PROFILE = 1;
 

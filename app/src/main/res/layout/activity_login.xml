@@ -31,26 +31,29 @@
             android:id="@+id/login_edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:background="#00000000"
             android:ems="50"
-            android:textSize="24sp"
             android:hint="@string/login_edtPhone"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/login_edtPasswd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:background="#00000000"
             android:ems="50"
-            android:textSize="24sp"
             android:hint="@string/login_edtPasswd"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/login_btnSubmit"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:background="@color/colorPink"
             android:text="@string/login_btnSubmit"

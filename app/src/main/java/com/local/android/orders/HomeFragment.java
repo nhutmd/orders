@@ -73,7 +73,7 @@ public class HomeFragment extends Fragment {
     }
 
     public void fabBtnClick() {
-        Toasty.success(getContext(), Helper.SUCCESS, Toast.LENGTH_LONG).show();
+        Toasty.success(getContext(), Helper.CREATE_ORDER, Toast.LENGTH_LONG).show();
     }
 
 }
