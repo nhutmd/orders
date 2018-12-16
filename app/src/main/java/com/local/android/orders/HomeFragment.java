@@ -1,5 +1,6 @@
 package com.local.android.orders;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.design.widget.BottomNavigationView;
@@ -38,6 +39,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         floatingActionButton = rootView.findViewById(R.id.fab_create_order);
+
         navigationView = rootView.findViewById(R.id.home_bottom_navigation);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +75,8 @@ public class HomeFragment extends Fragment {
     }
 
     public void fabBtnClick() {
-        Toasty.success(getContext(), Helper.CREATE_ORDER, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getContext(), CreateOrderActivity.class);
+        startActivity(intent);
     }
 
 }

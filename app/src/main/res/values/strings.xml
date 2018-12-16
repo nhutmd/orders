@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DH</string>
+    <string name="app_name">TO</string>
     <string name="flash_title">Chuyển Đơn Hàng</string>
     <string name="login_btnSubmit">Đăng Nhập</string>
     <string name="login_edtName">Tên Đăng Nhập</string>
@@ -10,11 +10,26 @@
     <string name="drawer_nav_orders">Đơn Hàng Đã Tạo</string>
     <string name="drawer_nav_order_ship">Đơn Hàng Cần Chuyển</string>
     <string name="drawer_nav_pay">Đơn Hàng Cần Thanh Toán</string>
-    <string name="drawer_nav_logout">Thoát</string>
+    <string name="drawer_nav_track">Theo Dõi Đơn Hàng</string>
+    <string name="drawer_nav_logout">Đăng Xuất</string>
     <string name="home_bottom_nav_main">Đơn Hàng</string>
     <string name="home_bottom_nav_coin">Số Xu</string>
     <string name="home_bottom_nav_profile">Hồ Sơ</string>
 
+    <string name="create_order_title">Tiêu Đề</string>
+    <string name="create_order_content">Mô Tả</string>
+    <string name="create_order_price">Giá Trị</string>
+    <string name="create_order_address_from">Địa Chỉ Lấy Đơn Hàng</string>
+    <string name="create_order_address_to">Địa Chỉ Cần Giao Đến</string>
+    <string name="create_order_btn">Tạo Đơn Hàng</string>
+
+    <string name="track_btnDriver">Chuyển Đơn Hàng</string>
+    <string name="track_btnStop">Kết Thúc</string>
+    <string name="track_btnPassenger">Theo Dõi Đơn Hàng</string>
+    <string name="track_Location">Toạ Độ Hiện Tại</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_passenger">Map</string>
 </resources>

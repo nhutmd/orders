@@ -2,6 +2,7 @@ package com.local.android.orders;
 
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.os.Bundle;
@@ -16,14 +17,16 @@ public class MainActivity extends Activity {
     private DrawerLayout mDrawerLayout;
     private FragmentManager fragmentManager = getFragmentManager();
     private static NavigationView navigationView;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Helper.setFullScreen(this);
+        Helper.setFullScreenAndColorBar(this);
         setContentView(R.layout.activity_main);
         mDrawerLayout = findViewById(R.id.home_drawer_layout);
         navigationView = findViewById(R.id.home_nav_view);
+        navigationView.getMenu().getItem(0).setChecked(true);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -49,19 +52,25 @@ public class MainActivity extends Activity {
                         Helper.viewFragment(mDrawerLayout, MainActivity.this.fragmentManager, PayFragment.newInstance(), R.id.home_content_frame);
                         break;
                     }
+                    case R.id.drawer_nav_track: {
+                        Helper.viewFragment(mDrawerLayout, MainActivity.this.fragmentManager, TrackFragment.newInstance(), R.id.home_content_frame);
+                        break;
+                    }
                     case R.id.drawer_nav_logout: {
-                        Toasty.error(MainActivity.this, "Nhấn Chọn Thoát", Toast.LENGTH_SHORT, true).show();
+                        Toasty.info(MainActivity.this, "Đăng Xuất", Toast.LENGTH_SHORT, true).show();
+                        intent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
                         break;
                     }
                 }
                 return true;
             }
         });
-        navigationView.getMenu().getItem(0).setChecked(true);
         Helper.viewFragment(mDrawerLayout, MainActivity.this.fragmentManager, HomeFragment.newInstance(), R.id.home_content_frame);
     }
 
-    public static void setSelectDrawer(int id){
-        navigationView.getMenu().getItem(id).setChecked(true);;
+    public static void setSelectDrawer(int id) {
+        navigationView.getMenu().getItem(id).setChecked(true);
     }
 }

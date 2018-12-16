@@ -1,7 +1,5 @@
 package com.local.android.orders.handler;
 
-import android.util.Log;
-
 import com.local.android.orders.contains.Helper;
 
 public class LoginHandler {

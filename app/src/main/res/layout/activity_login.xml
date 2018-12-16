@@ -55,7 +55,7 @@
             android:layout_height="80dp"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/colorPink"
+            android:background="@color/colorViolet"
             android:text="@string/login_btnSubmit"
             android:textColor="#fff"
             android:textSize="24sp"

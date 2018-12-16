@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "988469159017",
+    "firebase_url": "https://lampstacktracking.firebaseio.com",
+    "project_id": "lampstacktracking",
+    "storage_bucket": "lampstacktracking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988469159017:android:47ec218efb8e43af",
+        "android_client_info": {
+          "package_name": "com.local.android.orders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988469159017-ehe5harfskhqpugs39ohpn033v9073ta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.local.android.orders",
+            "certificate_hash": "76eaf2523d4afa936dcf89dbe61b82f3da43f2be"
+          }
+        },
+        {
+          "client_id": "988469159017-4ssj7e4i45k7b07k874p1kim9536cq9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc_cELvDEKIl-URZVspnSV07r2_xAFbdc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988469159017-4ssj7e4i45k7b07k874p1kim9536cq9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

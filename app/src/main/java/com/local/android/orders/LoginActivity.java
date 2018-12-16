@@ -10,8 +10,14 @@ import android.widget.Toast;
 
 import com.local.android.orders.contains.Helper;
 import com.local.android.orders.handler.LoginHandler;
+import com.local.android.orders.model.Login;
+import com.local.android.orders.network.RetrofitClientInstance;
+import com.local.android.orders.retrofit.DataService;
 
 import es.dmoral.toasty.Toasty;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends Activity {
     private Button btnLogin;
@@ -23,7 +29,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Helper.setFullScreen(this);
+        Helper.setFullScreenAndColorBar(this);
         setContentView(R.layout.activity_login);
         btnLogin = findViewById(R.id.login_btnSubmit);
         edtPhone = findViewById(R.id.login_edtPhone);
@@ -35,15 +41,35 @@ public class LoginActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btnLogin.setEnabled(false);
                 loginHandler = new LoginHandler(edtPhone.getText().toString(), edtPasswd.getText().toString());
                 if (loginHandler.validateInput(loginHandler.getPhone(), loginHandler.getPassword())) {
-                    Toasty.success(getApplicationContext(), "Tài Khoản Xác Thực!", Toast.LENGTH_LONG, true).show();
+                    DataService service = RetrofitClientInstance.getRetrofitInstance().create(DataService.class);
+                    Call<Login> call = service.login(loginHandler.getPhone(), loginHandler.getPassword());
+                    call.enqueue(new Callback<Login>() {
+                        @Override
+                        public void onResponse(Call<Login> call, Response<Login> response) {
+                            Login login = response.body();
+                            if (login.getStatus()) {
+                                Helper.USER = login.getUser();
+                                intent = new Intent(LoginActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                Toasty.error(getApplicationContext(), login.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<Login> call, Throwable t) {
+                            Toasty.error(getApplicationContext(), Helper.WRONG, Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
                 } else {
                     Toasty.error(getApplicationContext(), loginHandler.getMessage(), Toast.LENGTH_LONG, true).show();
                 }
-                intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+                btnLogin.setEnabled(true);
             }
         });
     }

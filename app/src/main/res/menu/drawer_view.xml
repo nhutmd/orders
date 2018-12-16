@@ -22,6 +22,10 @@
             android:icon="@drawable/baseline_payment_white_36dp"
             android:title="@string/drawer_nav_pay" />
         <item
+            android:id="@+id/drawer_nav_track"
+            android:icon="@drawable/baseline_info_white_36dp"
+            android:title="@string/drawer_nav_track" />
+        <item
             android:id="@+id/drawer_nav_logout"
             android:icon="@drawable/baseline_exit_to_app_white_36dp"
             android:title="@string/drawer_nav_logout" />

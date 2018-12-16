@@ -12,7 +12,7 @@ public class FlashActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Helper.setFullScreen(this);
+        Helper.setFullScreenAndColorBar(this);
         setContentView(R.layout.activity_flash);
         new Handler().postDelayed(new Runnable() {
             @Override
